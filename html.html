@@ -213,87 +213,98 @@ Caiu
         <br>
 
         <table id = "tabela-churrasco">
-            <caption>Lista de Compras</caption>
-            <tr>
-                <th>Itens</th>
-                <th>Classificação</th>
-                <th>Descrição</th>
-                <th>Quantidade</th>
-                <th>Valor</th>
-                <th>Subtotal</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td rowspan="3">Comidas</td>
-                <td>Carne</td>
-                <td>6</td>
-                <td>40</td>
-                <td>240</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Franguinho</td>
-                <td>2</td>
-                <td>15</td>
-                <td>30</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Pão de Alho</td>
-                <td>2</td>
-                <td>15</td>
-                <td>30</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td rowspan="3">Bebidas</td>
-                <td>Cerveja</td>
-                <td>20</td>
-                <td>5</td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Água c/Gás</td>
-                <td>5</td>
-                <td>3</td>
-                <td>15</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>Refri</td>
-                <td>5</td>
-                <td>8</td>
-                <td>40</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td rowspan="3">Outros</td>
-                <td>Copos</td>
-                <td>1</td>
-                <td>8</td>
-                <td>8</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>Guardanapos</td>
-                <td>1</td>
-                <td>5</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>Carvão</td>
-                <td>1</td>
-                <td>32</td>
-                <td>32</td>
-            </tr>
-            <tr>
-                <td colspan="5">Total</td>
-                <td>500</td>
-            </tr>
 
+            <thead>
+                <caption>Lista de Compras</caption>
+                <tr>
+                    <th>Itens</th>
+                    <th>Classificação</th>
+                    <th>Descrição</th>
+                    <th>Quantidade</th>
+                    <th>Valor</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td rowspan="3">Comidas</td>
+                    <td>Carne</td>
+                    <td>6</td>
+                    <td>40</td>
+                    <td>240</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Franguinho</td>
+                    <td>2</td>
+                    <td>15</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Pão de Alho</td>
+                    <td>2</td>
+                    <td>15</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td rowspan="3">Bebidas</td>
+                    <td>Cerveja</td>
+                    <td>20</td>
+                    <td>5</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Água c/Gás</td>
+                    <td>5</td>
+                    <td>3</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Refri</td>
+                    <td>5</td>
+                    <td>8</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td rowspan="3">Outros</td>
+                    <td>Copos</td>
+                    <td>1</td>
+                    <td>8</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Guardanapos</td>
+                    <td>1</td>
+                    <td>5</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Carvão</td>
+                    <td>1</td>
+                    <td>32</td>
+                    <td>32</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="5">Total</td>
+                    <td>500</td>
+                </tr>
+            </tfoot>
+            
         </table>
+
+        <hr>
 
         <h1>Container</h1>
         <div id = "card">
@@ -302,6 +313,41 @@ Caiu
             <img id="Sasuke3" src="./Imagens/Sasuke.jpg" alt="">
         </div>
         
+        <hr>
+
+        <h2>Formulários e Inputs</h2>
+
+        <a href="https://www.w3schools.com/tags/tag_tbody.asp#:~:text=The%20tag%20is%20used,of%20the%20header%20and%20footer.">Formularios</a>
+
+        <form action="">
+            <label for="">Informe seu nome</label>
+            <input id="nome" type="text" value="Camila">
+            <label for="cor">Cor</label>
+            <input type="color">
+            <label for="dtnascimento">Data de nascimento</label>
+            <input type="date">
+            <input type="datetime">
+            <input type="file">
+            <input type="number">
+            <input type="checkbox" name="" id="">
+            <input type="radio" name="" id="">
+            <input type="range">
+
+            <input type="submit" value="Submit">
+
+            
+        </form>
+
+        <button>Botão</button>
+
+        <form action="https://google.com/search" method="get">
+
+            <label for="chave">Informe a busca</label>
+            <input type="text" name="q" id="chave">
+
+            <input type="submit" value="Pesquisar">
+        </form>
+
 
 
     </body>
