@@ -2,15 +2,56 @@
 <html>
 <head>
     <title>Questão 3</title>
+
+    <style>
+        #Tabela_Estados_Brasil, th, td{
+            width: 550px;
+            border: 1px solid #000000;
+            border-collapse: collapse;
+            text-align: center;
+            font-size: 1.1em;
+        }
+
+        #Tabela_Estados_Brasil caption{
+            border: 1px solid #000000;
+            border-radius: 10px 10px 0px 0px;
+            background-color: #fffb00;
+            font-size: 1.2em;
+        }
+
+        #Tabela_Estados_Brasil th{
+            background-color: #fffd9b;
+        }
+
+        #Tabela_Estados_Brasil tr:nth-child(-n+7){
+            background-color: #a4f9a1;
+        }
+
+        #Tabela_Estados_Brasil tr:nth-child(n+8):nth-child(-n+16){
+            background-color: #fad3a3;
+        }
+
+        #Tabela_Estados_Brasil tr:nth-child(n+17):nth-child(-n+20){
+            background-color: #f7afed;
+        }
+
+        #Tabela_Estados_Brasil tr:nth-child(n+21):nth-child(-n+24){
+            background-color: #a2f8f7;
+        }
+
+        #Tabela_Estados_Brasil tr:nth-child(n+25):nth-child(-n+27){
+            background-color: #a2b6f7;
+        }
+
+    </style>
 </head>
 <body>
 
-    <h2>Tabela de estados com suas respctivas capitais</h2>
+    <h2>Tabela de Estados do Brasil com suas respectivas capitais</h2>
 
-    índice, região,  nome, estado, sigla, nome e capital.
-    <table>
+    <table id="Tabela_Estados_Brasil">
         <thead>
-            <caption>Estados</caption>
+            <caption>Estados Brasileiros</caption>
             <th>Índice</th>
             <th>Região</th>
             <th>Estado</th>
@@ -21,210 +62,196 @@
         <tbody>
             <tr>
                 <td>1</td>
-                <td>Sul</td>
-                <td>Santa Catarina</td>
-                <td>SC</td>
-                <td>Florianópolis</td>
-            </tr>
-
-            <tr>
-                <td>2</td>
-                <td>Sul</td>
-                <td>Paraná</td>
-                <td>PR</td>
-                <td>Curitiba</td>
-            </tr>
-
-            <tr>
-                <td>3</td>
-                <td>Sul</td>
-                <td>Rio Grande do Sul</td>
-                <td>RS</td>
-                <td>Porto Alegre</td>
-            </tr>
-
-            <tr>
-                <td>4</td>
-                <td>Sul</td>
+                <td rowspan="7">Norte</td>
                 <td>Acre</td>
                 <td>AC</td>
                 <td>Rio Branco</td>
             </tr>
 
             <tr>
-                <td>5</td>
-                <td>Sul</td>
-                <td>Alagoas</td>
-                <td>AL</td>
-                <td>Maceió</td>
-            </tr>
-
-            <tr>
-                <td>6</td>
-                <td>Sul</td>
+                <td>2</td>
                 <td>Amapá</td>
                 <td>AP</td>
                 <td>Macapá</td>
             </tr>
 
             <tr>
-                <td>7</td>
-                <td>Sul</td>
+                <td>3</td>
                 <td>Amazonas</td>
                 <td>AM</td>
                 <td>Manaus</td>
             </tr>
 
             <tr>
-                <td>8</td>
-                <td>Sul</td>
-                <td>Bahia</td>
-                <td>BA</td>
-                <td>Salvador</td>
-            </tr>
-
-            <tr>
-                <td>9</td>
-                <td>Sul</td>
-                <td>Ceará</td>
-                <td>CE</td>
-                <td>Fortaleza</td>
-            </tr>
-
-            <tr>
-                <td>1</td>
-                <td>Sul</td>
-                <td>Distrito Federal*</td>
-                <td>DF</td>
-                <td>Brasília</td>
-            </tr>
-
-            <tr>
-                <td>1</td>
-                <td>Sul</td>
-                <td>Espírito Santo</td>
-                <td>ES</td>
-                <td>Vitória</td>
-            </tr>
-
-            <tr>
-                <td>1</td>
-                <td>Sul</td>
-                <td>Goiás</td>
-                <td>GO</td>
-                <td>Goiânia</td>
-            </tr>
-
-            <tr>
-                <td>1</td>
-                <td>Sul</td>
-                <td>Maranhão</td>
-                <td>MA</td>
-                <td>São Luís</td>
-            </tr>
-
-            <tr>
-                <td>1</td>
-                <td>Sul</td>
-                <td>Mato Grosso</td>
-                <td>MT</td>
-                <td>Cuiabá</td>
-            </tr>
-
-            <tr>
-                <td>1</td>
-                <td>Sul</td>
-                <td>Mato Grosso do Sul</td>
-                <td>MS</td>
-                <td>Campo Grande</td>
-            </tr>
-
-            <tr>
-                <td>1</td>
-                <td>Sul</td>
-                <td>Minas Gerais</td>
-                <td>MG</td>
-                <td>Belo Horizonte</td>
-            </tr>
-
-            <tr>
-                <td>1</td>
-                <td>Sul</td>
+                <td>4</td>
                 <td>Pará</td>
                 <td>PA</td>
                 <td>Belém</td>
             </tr>
 
             <tr>
-                <td>1</td>
-                <td>Sul</td>
+                <td>5</td>
+                <td>Rondônia</td>
+                <td>RO</td>
+                <td>Porto Velho</td>
+            </tr>
+
+            <tr>
+                <td>6</td>
+                <td>Roraima</td>
+                <td>RR</td>
+                <td>Boa Vista</td>
+            </tr>
+
+            <tr>
+                <td>7</td>
+                <td>Tocantins</td>
+                <td>TO</td>
+                <td>Palmas</td>
+            </tr>
+
+             <tr>
+                <td>8</td>
+                <td rowspan="9">Nordeste</td>
+                <td>Alagoas</td>
+                <td>AL</td>
+                <td>Maceió</td>
+            </tr>
+
+            <tr>
+                <td>9</td>
+                <td>Bahia</td>
+                <td>BA</td>
+                <td>Salvador</td>
+            </tr>
+
+            <tr>
+                <td>10</td>
+                <td>Ceará</td>
+                <td>CE</td>
+                <td>Fortaleza</td>
+            </tr>
+
+            <tr>
+                <td>11</td>
+                <td>Maranhão</td>
+                <td>MA</td>
+                <td>São Luís</td>
+            </tr>
+
+            <tr>
+                <td>12</td>
+                <td>Paraíba</td>
+                <td>PB</td>
+                <td>João Pessoa</td>
+            </tr>
+
+            <tr>
+                <td>13</td>
+                <td>Pernambuco</td>
+                <td>PE</td>
+                <td>Recife</td>
+            </tr>
+
+            <tr>
+                <td>14</td>
+                <td>Piauí</td>
+                <td>PI</td>
+                <td>Teresina</td>
+            </tr>
+
+            <tr>
+                <td>15</td>
+                <td>Rio Grande do Norte</td>
+                <td>RN</td>
+                <td>Natal</td>
+            </tr>
+
+            <tr>
+                <td>16</td>
+                <td>Sergipe</td>
+                <td>SE</td>
+                <td>Aracaju</td>
+            </tr>
+
+            <tr>
+                <td>17</td>
+                <td rowspan="4">Centro Oeste</td>
+                <td>Distrito Federal*</td>
+                <td>DF</td>
+                <td>Brasília</td>
+            </tr>
+
+            <tr>
+                <td>18</td>
+                <td>Goiás</td>
+                <td>GO</td>
+                <td>Goiânia</td>
+            </tr>
+
+            <tr>
+                <td>19</td>
+                <td>Mato Grosso</td>
+                <td>MT</td>
+                <td>Cuiabá</td>
+            </tr>
+
+            <tr>
+                <td>20</td>
+                <td>Mato Grosso do Sul</td>
+                <td>MS</td>
+                <td>Campo Grande</td>
+            </tr>
+
+            <tr>
+                <td>21</td>
+                <td rowspan="4">Sudeste</td>
+                <td>Espírito Santo</td>
+                <td>ES</td>
+                <td>Vitória</td>
+            </tr>
+
+            <tr>
+                <td>22</td>
+                <td>Minas Gerais</td>
+                <td>MG</td>
+                <td>Belo Horizonte</td>
+            </tr>
+
+            <tr>
+                <td>23</td>
+                <td>Rio de Janeiro</td>
+                <td>RJ</td>
+                <td>Rio de Janeiro</td>
+            </tr>
+
+            <tr>
+                <td>24</td>
+                <td>São Paulo</td>
+                <td>SP</td>
+                <td>São Paulo</td>
+            </tr>
+
+            <tr>
+                <td>25</td>
+                <td rowspan="3">Sul</td>
+                <td>Paraná</td>
+                <td>PR</td>
+                <td>Curitiba</td>
+            </tr>
+
+            <tr>
+                <td>26</td>
                 <td>Rio Grande do Sul</td>
                 <td>RS</td>
                 <td>Porto Alegre</td>
             </tr>
 
             <tr>
-                <td>1</td>
-                <td>Sul</td>
-                <td>Rio Grande do Sul</td>
-                <td>RS</td>
-                <td>Porto Alegre</td>
-            </tr>
-
-            <tr>
-                <td>1</td>
-                <td>Sul</td>
-                <td>Rio Grande do Sul</td>
-                <td>RS</td>
-                <td>Porto Alegre</td>
-            </tr>
-
-            <tr>
-                <td>1</td>
-                <td>Sul</td>
-                <td>Rio Grande do Sul</td>
-                <td>RS</td>
-                <td>Porto Alegre</td>
-            </tr>
-
-            <tr>
-                <td>1</td>
-                <td>Sul</td>
-                <td>Rio Grande do Sul</td>
-                <td>RS</td>
-                <td>Porto Alegre</td>
-            </tr>
-
-            <tr>
-                <td>1</td>
-                <td>Sul</td>
-                <td>Rio Grande do Sul</td>
-                <td>RS</td>
-                <td>Porto Alegre</td>
-            </tr>
-
-            <tr>
-                <td>1</td>
-                <td>Sul</td>
-                <td>Rio Grande do Sul</td>
-                <td>RS</td>
-                <td>Porto Alegre</td>
-            </tr>
-
-            <tr>
-                <td>1</td>
-                <td>Sul</td>
-                <td>Rio Grande do Sul</td>
-                <td>RS</td>
-                <td>Porto Alegre</td>
-            </tr>
-
-            <tr>
-                <td>1</td>
-                <td>Sul</td>
-                <td>Rio Grande do Sul</td>
-                <td>RS</td>
-                <td>Porto Alegre</td>
+                <td>27</td>
+                <td>Santa Catarina</td>
+                <td>SC</td>
+                <td>Florianópolis</td>
             </tr>
 
         </tbody>
