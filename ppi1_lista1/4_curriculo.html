@@ -3,10 +3,177 @@
 <head>
     
     <title>Questão 4 - Currículo</title>
+    <style>
+
+        #Horarios, caption, th, td{
+            width: 1300px;
+            height: 25px;
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+
+        caption{
+            background-color: rgb(181, 107, 250);
+            font-size: 1.1em;
+        }
+
+        th{
+            background-color: rgb(208, 159, 255);
+        }
+
+        tr{
+            background-color: rgb(227, 198, 255);
+        }
+
+        #Foto{
+            width: 150px;
+            height: 150px;
+            border: 1px solid #000;
+            border-radius: 100px;
+        }
+
+        #Nome_Foto{
+            width: 420px;
+            display: flex;
+        }
+
+        #Nome_Foto #Foto{
+            display: inline-block;
+        }
+
+        #Nome_Foto #Nome_Email{
+            display: block;
+            margin: auto;
+            font-size: 1.05em;
+        }
+
+    </style>
 </head>
 <body>
 
-    oi
+    <h1>Currículo</h1>
+
+    <div id="Nome_Foto">
+        <img id="Foto" src="./Imagens_Lista/Arpanet.png" alt="">
+        <div id="Nome_Email">
+            <span><strong>Nome:</strong> Camila Vitória Tedesco</span>
+            <br><span><strong>Email:</strong> <a href="mailto:">camilatedesco29@gmail.com</a></span>
+        </div>
+        
+    </div>
+
+    <h3 id="Descricao">Descrição:</h3>
+    <p>Sou estudante do IFSC-Câmpus Gaspar, atualmente estou na ultima fase do curso de <sub>Informática</sub></p>
+
+    <h3 id="Habilidades">Habilidades técnicas:</h3>
+    <ul>
+        <li>Noções de programação</li>
+        <li>Edição de slides, textos e videos</li>
+        <li>Crochê de Amigurimi</li>
+        <li>Trabalhos artesanais</li>
+    </ul>
+    <section>
+        <h3 id="Formacao">Formação Acadêmica:</h3>
+        <ul>
+            <li>Cursando Ensino Médio Técnico no IFSC - Previsão de terminar: <b>Julho/2026</b></li>
+            <li>Clube de Teatro - <mark>IFSC</mark></li>
+        </ul>
+    </section>
+
+    <h3 id="Experiencia">Experiência Profissional:</h3>
+    
+    <span><em>Produção de amigurumis, marca páginas e tapetes de crochê</em></span>
+    <span><em>Costura de roupas</em></span>
+
+    <h3 id="Exemplos">Exemplos de Trabalhos</h3>
+
+    <img src="" alt="">
+    <img src="" alt="">
+
+    <h3 id="Horario">Grade de Horários</h3>
+
+    <table id="Horarios">
+        <thead>
+            <caption><b>Horários</b></caption>
+            <tr>
+                <th>Hora</th>
+                <th>Domingo</th>
+                <th>Segunda</th>
+                <th>Terça</th>
+                <th>Quarta</th>
+                <th>Quinta</th>
+                <th>Sexta</th>
+                <th>Sábado</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>07:20 - 09:10</td>
+                <td>Lazer</td>
+                <td>Português</td>
+                <td>Empreendedorismo</td>
+                <td>Projeto Integrador</td>
+                <td>Programação para Jogos</td>
+                <td>Matemática</td>
+                <td>Lazer</td>
+            </tr>
+            <tr>
+                <td>9:30 - 12:15</td>
+                <td>Matemática - Enem</td>
+                <td>Sociologia</td>
+                <td>Projeto Integrador</td>
+                <td>Dispositivos Móveis</td>
+                <td>Projeto de Sistemas</td>
+                <td>Programação p/ Internet</td>
+                <td>Português-Enem</td>
+            </tr>
+            <tr>
+                <td>13:00 - 14:30</td>
+                <td>Matemática - Enem</td>
+                <td>História - Enem</td>
+                <td>Fisíca - Enem</td>
+                <td>Redação</td>
+                <td>Biologia - Enem e Vestibular</td>
+                <td>Química - Enem e Vestibular</td>
+                <td>Português-Enem</td>
+            </tr>
+
+            <tr>
+                <td>14:45 - 17:30</td>
+                <td>Geografia - Enem</td>
+                <td>Filosofia - Enem</td>
+                <td>Sociologia - Enem</td>
+                <td>Redação</td>
+                <td>Literatura - Enem e Vestibular</td>
+                <td>Física - Enem e Vestibular</td>
+                <td>Redação - Enem</td>
+            </tr>
+
+            <tr>
+                <td>18:00 - 21:30</td>
+                <td>Leitura</td>
+                <td>Estudo de Programação</td>
+                <td>Química - Enem e vestibular</td>
+                <td>Matemática - Enem e vestibular</td>
+                <td>Geografia - Enem e Vestibular</td>
+                <td>português - Enem e Vestibular</td>
+                <td>Biologia - Enem</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <details>
+        <summary><strong>Menu de Navegação</strong></summary>
+        <p><a href="#Descricao">Ir para Descrição</a></p>
+        <p><a href="#Habilidades">Ir para Habilidades Técnicas</a></p>
+        <p><a href="#Formacao">Ir para Formação Acadêmica</a></p>
+        <p><a href="#Experiencia">Ir para Experiência Profissional</a></p>
+        <p><a href="#Exemplos">Ir para Exemplos de Trabalhos</a></p>
+        <p><a href="#Horario">Ir para Grade de Horarios</a></p>
+    </details>
     
 </body>
 </html>
