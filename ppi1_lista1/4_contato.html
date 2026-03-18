@@ -1,9 +1,134 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Questão 4 - Contato</title>
+
+    <style>
+        #painel1 {
+            display: block;
+            margin: auto;
+        }
+
+        #painel1 h1,p {
+            text-align: center;
+        }
+
+        #painel1 p{
+            font-size: 1.1em;
+        }
+
+        #painel1 span{
+            font-size: 0.9em;
+        }
+
+        #painel1 #painel2 {
+            background-color: #f2eded;
+            display: flex;
+            margin: auto;
+            font-size: 1.2em;
+            border: 1px solid #000;
+            width: 830px;
+            height: 450px;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+        #Nome {
+            width: 635px;
+        }
+
+        #Email {
+            width: 630px;
+        }
+
+        #Assunto {
+            width: 694px;
+            max-width: 694px;
+            height: 100px;
+            max-height: 130px;
+        }
+
+        #Mensagem {
+            width: 694px;
+            max-width: 694px;
+            height: 50px;
+            max-height: 80px;
+        }
+
+        #Botão_Enviar {
+            text-align: center;
+            display: block;
+            margin: auto;
+            font-size: 1.3em;
+            background-color: rgb(189, 189, 225);
+        }
+
+        #Navegar_Curriculo{
+            background-color: #88ff7b;
+            font-size: 1.4em;
+            display: block;
+            margin-left: auto;
+        }
+    </style>
 </head>
+
 <body>
-    
+
+    <div id="painel1">
+
+        <h1>Contato</h1>
+
+        <p>Neste formulário de contato, preencha todos os campos indicados para tratar do assunto necessário. <br>Após o preenchimento deste formulário, realize o envio. <br><span><i>Obs: O campo Nome e E-mail são obrigatórios!</i></span></p>
+
+        <div id="painel2">
+
+            <form action="">
+                <label for="">Nome:</label>
+                <input id="Nome" type="text" placeholder="Insira o seu nome..." required>
+
+                <br><br>
+
+                <label for="">E-mail:</label>
+                <input id="Email" type="email" placeholder="Insira o seu email..." required>
+
+                <br><br>
+
+                <label for="">Assunto:</label>
+                <br>
+
+                <textarea id="Assunto" placeholder="Informe o assunto aqui!"></textarea>
+
+                <br><br>
+
+                <label for="Estado">Estado:</label>
+                <select id="Estado">
+                    <option value="Pendente">Pendente</option>
+                    <option value="Em_andamento">Em andamento</option>
+                    <option value="Concluído">Concluído</option>
+                </select>
+
+                <br><br>
+
+                <label for="">Mensagem:</label>
+                <br>
+                <textarea id="Mensagem" placeholder="Informe uma mensagem aqui!"></textarea>
+
+            </form>
+        </div>
+
+        <br>
+
+        <button id="Botão_Enviar" type="submit">Enviar</button>
+
+        <form action="4_curriculo.html">
+            <input id="Navegar_Curriculo" type="submit" value="Navegar para 4_currículo">
+        </form>
+        
+    </div>
+
 </body>
+
 </html>
