@@ -6,6 +6,7 @@
     <title>Questão 2</title>
 
     <style>
+
         #Imagem_Requisicao {
             width: 600px;
             border: 1px solid #000;
@@ -31,15 +32,10 @@
         }
 
         #Imagens_Exemplos{
-            width: 940px;
+            width: 1100px;
             justify-content: center;
             align-items: center;
             display: flex;
-        }
-
-        #Div_Busca, #Div_Img_G, #Div_Img_R{
-            text-align: center;
-            width: 320px;
         }
 
         #Imagem_Busca, #Imagem_Res_GET, #Imagem_Res_POST{
@@ -47,6 +43,10 @@
             display: block;
             width: 300px;
             height: 200px;
+        }
+
+        figcaption{
+            text-align: center;
         }
     </style>
 
@@ -56,12 +56,12 @@
 
     <h1>Protocolo HTTP</h1>
 
-    <p>O HTTP é um protocolo de comunicação utilizada em uma arquitetura Cliente-Servidor. Assim, <br>quando o cliente
-        faz uma solicitação ao servidor, este protocolo é utilizado nesta comunicação</p>
+    <p>O HTTP(Protocolo de Transferência de Hipertexto) é usuado para carragar páginas web usando os links de hipertexto. <br>Este protocolo funciona em um modelo de comunicação  que utiliza uma arquitetura Cliente-Servidor. Assim, <br>quando o cliente
+    faz uma solicitação ao servidor, este protocolo é utilizado nesta comunicação</p>
 
-    <h3>Requisição</h3>
+    <h2>Requisição</h2>
 
-    <p>Ao fazer uma requisição ao servidor, é enviada uma mensagem HTTP, que podem ter ações como <br>por exemplo GET ou
+    <p>O cliente ao fazer uma requisição ao servidor, envia-se uma mensagem HTTP, que podem ter ações como <br>por exemplo GET ou
         POST. E o retorno do servidor após processá-la é uma response HTTP.</p>
     <p>No caso dos servidores WEB, o retorno é um código HTML como uma página.</p>
 
@@ -70,10 +70,17 @@
         <span><em>Imagem Ilustrativa de Requisição</em></span>
     </div>
 
+    <h2>Request e response na Web</h2>
+
+    <p>O request é a solicitação e o response é a resposta</p>
+    <p>Assim, o navegador envia um request ao servidor, e o servidor processa esta <br>solicitação e após isso o servidor envia então uma response.</p>
+
+    <h3>Exemplos de Requisição</h3>
+
     <br>
     <br>
 
-    <h3>Exemplo com HTTP</h3>
+    <h2>Exemplo com HTTP</h2>
     <div id="Pesquisa">
         <form action="https://google.com/search" method="get">
             <label for="">Informe oque deseja Pesquisar</label>
@@ -86,23 +93,23 @@
 
     <br>
 
-    <h3>Imagens de Resultados</h3>
+    <h2>Imagens de Resultados</h2>
 
     <div id="Imagens_Exemplos">
-        <div id="Div_Busca">
+
+        <figure>
             <img id="Imagem_Busca" src="./Imagens_Lista/Exemplo_Busca.png" alt="">
-            <span><em>Exemplo de Busca</em></span>
-        </div>
-
-        <div id="Div_Img_G">
+            <figcaption>Exemplo de Busca</figcaption>
+        </figure>
+        <figure>
             <img id="Imagem_Res_GET" src="./Imagens_Lista/Exemplo_GET.png" alt="">
-            <span><em>Resultado(response) da busca com GET</em></span>
-        </div>
-
-        <div id="Div_Img_P">
+            <figcaption>Resultado(response) da busca com GET</figcaption>
+        </figure>
+        <figure>
             <img id="Imagem_Res_POST" src="./Imagens_Lista/Exemplo_Resultado_POST.png" alt="">
-            <span><em>Resultado(response) da busca com POST</em></span>
-        </div>
+            <figcaption>Resultado(response) da busca com POST</figcaption>
+        </figure>
+
     </div>
 
 

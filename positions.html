@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Positions</title>
+
+    <style>
+        *{
+            border: 1px solid #730f86;
+            margin: 0px;
+            padding: 10px;
+        }
+
+        .box{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border-color: aqua;
+        }
+        #box1{
+            background-color: rgb(133, 27, 231);
+            position: relative;
+            top: 100px;
+            left: 150px;
+        }
+        #box2{
+            background-color: rgb(120, 39, 187);
+            position: static;
+            top: 200px;
+        }
+        #box3{
+            background-color: rgb(144, 68, 231);
+            position: absolute;
+            top: 5px;
+        }
+        #box4{
+            background-color: rgb(167, 113, 230);
+            position: fixed;
+            bottom: 0px;
+            left: 0px;
+
+        }
+        #box5{background-color: rgb(200, 174, 235);}
+        span:last-child{background-color: #e6c8f1;}
+
+        #container{position: relative;}
+    </style>
+
+</head>
+<body>
+
+    <div style="height: 100px;"></div>
+
+    <div id="container">
+        <div id="box1" class="box">1</div>
+        <div id="box2" class="box">2</div>
+        <div id="box3" class="box">3</div>
+        <div id="box4" class="box">4</div>
+        <div id="box5" class="box">5</div>
+        <span class="box">6</span>
+    </div>
+    
+</body>
+</html>
