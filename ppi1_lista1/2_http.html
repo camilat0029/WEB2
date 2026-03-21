@@ -38,15 +38,30 @@
             display: flex;
         }
 
-        #Imagem_Busca, #Imagem_Res_GET, #Imagem_Res_POST{
-            border: 1px solid #000;
-            display: block;
-            width: 300px;
-            height: 200px;
-        }
-
         figcaption{
             text-align: center;
+        }
+
+        p, ul{
+            font-size: 1.1em;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        #Imagem_Legenda{
+            display: block;
+            margin: auto;
+            
+        }
+
+        #p_http_inicio{
+            text-align: center;
+            margin: auto;
+            background-color: rgb(212, 255, 240);
+            width: 1000px;
+            border-radius: 10px 10px 10px 10px;
         }
     </style>
 
@@ -56,13 +71,11 @@
 
     <h1>Protocolo HTTP</h1>
 
-    <p>O HTTP(Protocolo de Transferência de Hipertexto) é usuado para carragar páginas web usando os links de hipertexto. <br>Este protocolo funciona em um modelo de comunicação  que utiliza uma arquitetura Cliente-Servidor. Assim, <br>quando o cliente
-    faz uma solicitação ao servidor, este protocolo é utilizado nesta comunicação</p>
+    <p id="p_http_inicio">O HTTP(Protocolo de Transferência de Hipertexto) é usado para carregar páginas web usando os links de hipertexto. Este protocolo funciona em um modelo de comunicação  que utiliza uma arquitetura Cliente-Servidor. Assim, quando o cliente faz uma solicitação ao servidor, este protocolo é utilizado nesta comunicação, logo o HTTP é a base da internet.</p>
 
     <h2>Requisição</h2>
 
-    <p>O cliente ao fazer uma requisição ao servidor, envia-se uma mensagem HTTP, que podem ter ações como <br>por exemplo GET ou
-        POST. E o retorno do servidor após processá-la é uma response HTTP.</p>
+    <p>O cliente ao fazer uma requisição ao servidor, envia-se uma mensagem HTTP, que podem ter ações como por exemplo GET ou POST. E o retorno do servidor após processá-la é uma response HTTP.</p>
     <p>No caso dos servidores WEB, o retorno é um código HTML como uma página.</p>
 
     <div id="Imagem_Legenda">
@@ -70,49 +83,22 @@
         <span><em>Imagem Ilustrativa de Requisição</em></span>
     </div>
 
+    <h3>Exemplos de Requisição</h3>
+
+    <ul>
+        <li><b>GET:</b> busca dados, solicita o perfil de usuários;</li>
+        <li><b>POST:</b> envia dados para criar um novo usuário;</li>
+        <li><b>PUT:</b> atualiza as informações/dados de um usuário;</li>
+        <li><b>DELETE:</b> remove dados de um usuário</li>
+    </ul>
+
     <h2>Request e response na Web</h2>
 
     <p>O request é a solicitação e o response é a resposta</p>
-    <p>Assim, o navegador envia um request ao servidor, e o servidor processa esta <br>solicitação e após isso o servidor envia então uma response.</p>
-
-    <h3>Exemplos de Requisição</h3>
-
-    <br>
-    <br>
-
-    <h2>Exemplo com HTTP</h2>
-    <div id="Pesquisa">
-        <form action="https://google.com/search" method="get">
-            <label for="">Informe oque deseja Pesquisar</label>
-            <br>
-            <br><input id="Local_Pesquisa" name="q" type="text" placeholder="Digite aqui...">
-            <br>
-            <br><input id="Buscar" type="submit" value="Buscar">
-        </form>
-    </div>
+    <p>Desta forma, o navegador envia um request ao servidor, e o servidor processa esta solicitação e após isso o servidor envia então uma response.</p>
+    <p>Assim, o cliente, navegador envia um método HTTP, como o GET ou POST, com a url, cabeçalhos, entre outros. E o servidor vai então processar isso e envia uma response com códigos de status, cabeçalhos e a resposta do que foi solicitado. Eles são de extrema importância na comunicação da Web.</p>
 
     <br>
-
-    <h2>Imagens de Resultados</h2>
-
-    <div id="Imagens_Exemplos">
-
-        <figure>
-            <img id="Imagem_Busca" src="./Imagens_Lista/Exemplo_Busca.png" alt="">
-            <figcaption>Exemplo de Busca</figcaption>
-        </figure>
-        <figure>
-            <img id="Imagem_Res_GET" src="./Imagens_Lista/Exemplo_GET.png" alt="">
-            <figcaption>Resultado(response) da busca com GET</figcaption>
-        </figure>
-        <figure>
-            <img id="Imagem_Res_POST" src="./Imagens_Lista/Exemplo_Resultado_POST.png" alt="">
-            <figcaption>Resultado(response) da busca com POST</figcaption>
-        </figure>
-
-    </div>
-
-
 
 </body>
 
