@@ -7,7 +7,13 @@
         *{
             border: 1px solid #730f86;
             margin: 0px;
-            padding: 10px;
+            padding: 0px;
+        }
+
+        .container{
+            position: static;
+            border-color: #4c00ff;
+            border-width: 10px;
         }
 
         .box{
@@ -19,30 +25,29 @@
         #box1{
             background-color: rgb(133, 27, 231);
             position: relative;
-            top: 100px;
-            left: 150px;
+            top: 300px;
+            left: 50px;
         }
         #box2{
             background-color: rgb(120, 39, 187);
-            position: static;
-            top: 200px;
+            position: absolute;
+            opacity: 0.5;
+            text-align: center;
+            top: 300px;
         }
         #box3{
             background-color: rgb(144, 68, 231);
-            position: absolute;
-            top: 5px;
+            position: fixed;
+            top: 0px;
+            right: 0px;
         }
         #box4{
             background-color: rgb(167, 113, 230);
-            position: fixed;
-            bottom: 0px;
-            left: 0px;
 
         }
         #box5{background-color: rgb(200, 174, 235);}
         span:last-child{background-color: #e6c8f1;}
 
-        #container{position: relative;}
     </style>
 
 </head>
@@ -58,6 +63,15 @@
         <div id="box5" class="box">5</div>
         <span class="box">6</span>
     </div>
+
+    <!--1 - Fluxo textual do HTML
+            display: inline(funciona como texto, não funciona escolher o tamanho do box com width e height), 
+            block, inline-block-->
+
+    <!--2 - Position: static (POSIONA O ELEMENTO COM BASE NA POSIÇÃO ESTATICA DELE, IGNORA TOP, BOTTON...)
+            Position: absolute (CRIA UMA CAMADA DE EXIBIÇÃO ADCIONAL. REFERENCIA: PRIMEIRO ANCESTRAL NÃO ESTATICO)
+            Position: fixed(SE POSICIONA EM RELAÇÃO A TELA)
+            top, botton, left, right-->
     
 </body>
 </html>
