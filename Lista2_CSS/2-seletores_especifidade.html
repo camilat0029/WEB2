@@ -27,6 +27,28 @@
 
    <!--Seletor - Especifidade(Ordem):
         *, nome da tag, .class, #, inline css-->
+
+
+   <hr>
+
+   <h1>Justificativa</h1>
+
+   <p>O <b>item 1</b> será na cor Vermelho, pois foi especificado essa cor para a tag (li) e não tem <br>outro seletor com maior especificidade, se por exemplo tivesse um seletor com o id de <br> "lip0" no caso do item 1 com outra cor seria ela, mas como não tem segue a cor da tag (li).</p>
+
+   <p>O <b>item 2</b> é na cor Cinza por conta de fazer parte da classe fruta. Ele primeiramente <br> seria vermelho por conta da tag li, mas o seletor de (.class) tem uma especificidade <br> maior em relação ao nome da tag.</p>
+
+   <p>O <b>item 3</b> é na cor Azul, pois obedece a regra 6 de id. Então primeiro ele seria vermelho <br> por conta da tag (li), segundo ele iria ser cinza por conta da classe fruta, porém  <br> foi da cor do id pois ele tem uma maior especificidade em relação aos outros.</p>
+
+   <p>O <b>item 4</b> é Laranja, pois irá seguir a regra 7. Ele segue a mesma ordem do item anterior <br> porém ele tem uma regra de selector aplicada a mais nele que combina o id e a classe <br> junto, tendo maior especificidade.</p>
+
+   <p>O <b>item 5</b> é Cinza. Ele seria vermelho por conta da tag (li), mas pertence a classe fruta <br> e segue a regra dela, pois ela tem mais especificidade. Apesar deste item ter um id <br> (lip4), não tem nenhuma regra aplicada a ele, então ele obedece a cor da classe.</p>
+
+   <p>O <b>item 6</b> é Preto. Ele seria vermelho(tag li) primeiro, mas pertence a classe churras <br> que tem como regra verde, porém a um selecor que combina a tag li e a classe churras <br> que tem mais especificidade sobre os outros, portanto segue essa regra.</p>
+
+   <p>O <b>item 7</b> é Preto, pois segue é o mesmo caso da anterior.</p>
+
+   <p>O <b>item 8</b> é Magenta. Ele segue as mesmas regras dos dois anteriores, porém nele tem uma <br> regra a mais aplicada que combina a classe churras e o draggable, assim tendo maior <br> especificidade sobre as anteriores.</p>
+
 </body>
 </html>
 
