@@ -1,35 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>6-barquinho</title>
 
-    
+
 
     <style>
-
-        #fundo{
-            width: 100%;
+        * {
+            margin: 0;
+            padding: 0px;
+            overflow: hidden;
         }
 
-        @keyframes balancoFundo {
+        #fundo_barco {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-image: url("../Imagens/Fundo_Mar.jpg");
+            background-size: cover;
+        }
+
+        .mar {
+            background-color: rgb(0, 31, 170);
+            position: absolute;
+            display: inline-block;
+            width: 100%;
+            height: 50%;
+            top: 68%;
+            left: 0px;
+        }
 
 
+        .mar::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background: radial-gradient(ellipse at center,
+                    rgb(42, 72, 205),
+                    transparent 70%);
+        }
+
+        .mar::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background: radial-gradient(circle at center, rgb(122, 145, 245), transparent 70%)
+        }
+
+        #barco {
+            display: inline-block;
+            font-size: 100px;
+            position: absolute;
+            top: 52%;
+            left: 0%;
+            animation: balancoBarco 10s linear 0s infinite;
+        }
+
+        .nuvem{
+            position: absolute;
+            display: inline-block;
+            width: 400px;
+            height: 200px;
+            top: 15%;
+            left: 0%;
+            transform: rotate(180deg);
+            animation: movimentoNuvem 50s linear 0s infinite;
+        }
+
+        .nuvem1 {
+            position: absolute;
+            background-color: rgb(215, 215, 215);
+            width: 180px;
+            height: 125px;
+            border-radius: 100% 100% 50% 50%;
+            left: 65px;
+             box-shadow:2px 0px 0px 0px rgb(1, 1, 1);
+        }
+
+        .nuvem2 {
+            position: absolute;
+            background-color: rgb(215, 215, 215);
+            width: 200px;
+            height: 100px;
+            border-radius: 100% 50% 25% 100%;
+            top: 30px;
+            box-shadow: 0.05px 0px 0px 0px rgb(1, 1, 1);
+        }
+
+        .nuvem3 {
+            position: absolute;
+            background-color: rgb(215, 215, 215);
+            width: 180px;
+            height: 125px;
+            transform: rotate(180deg);
+            border-radius: 100%;
+            left: 65px;
+            top: 38px;
+        }
+
+        .nuvem4 {
+            position: absolute;
+            background-color: rgb(215, 215, 215);
+            width: 200px;
+            height: 90px;
+            transform: rotate(180deg);
+            border-radius: 100% 50% 25% 100%;
+            left: 130px;
+            top: 30px;
+        }
+
+        @keyframes movimentoNuvem {
+
+            0%{}
+
+            100%{
+                left: 100vw;
+            }
             
+        }
+
+        @keyframes balancoBarco {
+
+            0% {}
+
+            20% {
+                top: 57%;
+            }
+
+            40% {
+                top: 52%
+            }
+
+            60% {
+                top: 57%;
+            }
+
+            80% {
+                top: 52%
+            }
+
+            100% {
+                top: 57%;
+                left: 100vw;
+            }
+
         }
     </style>
 
 
 </head>
+
 <body>
-    
-    <div>
-        <img id="fundo" src="/Imagens/Fundo_Mar.jpg" alt="">
+
+    <div id="fundo_barco">
+
+        <div class="nuvem">
+            <div class="nuvem1"></div>
+            <div class="nuvem2"></div>
+            <div class="nuvem3"></div>
+            <div class="nuvem4"></div>
+        </div>
+
+        <div class="mar"></div>
         <span id="barco">⛵</span>
-        
+
+
+
     </div>
-    
+
+
+
 
 </body>
+
 </html>
