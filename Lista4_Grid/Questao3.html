@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3 - Grid</title>
+
+    <style>
+
+        *{
+            margin: 0px;
+            padding: 6px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+        }
+
+        .container{
+            display: grid;
+            height: 95vh;
+
+            grid-template-areas: "A A . B"
+                                 "C D D D"
+                                 "C D D D";
+            gap: 15px
+        }
+
+        .box{
+            display: grid;
+            background-color: rgb(71, 71, 71);
+            border-radius: 10px;
+            color:white;
+        }
+
+        .boxMenores{
+            background-color: rgb(201, 201, 201);
+            color: rgb(71, 71, 71);
+            border-radius: 8px;
+        }
+
+        #box1{
+            grid-area: A;
+        }
+
+        #box2{
+            grid-area: B;
+        }
+
+        #box3{
+            grid-area: C;
+        }
+
+        #box4{
+            display: grid;
+            grid-area: D;
+            padding: 30px;
+            gap: 18px;
+
+            grid-template-columns: 1fr 2fr 1fr;
+            
+            grid-template-areas: "E F G"
+                                 "M I J";
+        }
+
+        #boxM1{grid-area: E;}
+        #boxM2{grid-area: F;}
+        #boxM3{grid-area: G;}
+        #boxM4{grid-area: M;}
+        #boxM5{grid-area: I;}
+        #boxM6{grid-area: J;}
+
+        span{
+            position: relative;
+            left: 30px;
+            top: 30px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="box" id="box1"><span>A</span></div>
+
+        <div class="box" id="box2"><span>B</span></div>
+
+        <div class="box" id="box3"><span>C</span></div>
+
+        <div class="box" id="box4">
+            <div class="boxMenores" id="boxM1"><span>E</span></div>
+            <div class="boxMenores" id="boxM2"><span>F</span></div>
+            <div class="boxMenores" id="boxM3"><span>G</span></div>
+            <div class="boxMenores" id="boxM4"><span>M</span></div>
+            <div class="boxMenores" id="boxM5"><span>I</span></div>
+            <div class="boxMenores" id="boxM6"><span>J</span></div>
+        </div>
+    </div>
+    
+</body>
+</html>

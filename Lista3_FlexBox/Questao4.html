@@ -24,45 +24,46 @@
             border: 1px solid black;
             display: flex;
             background-position: center;
+            width: 200px;
+            border-radius: 100px;
+            align-items: flex-end;
+            justify-content: center;
+            height: 90vh;
 
         }
 
-        #box_imagem1, #box_imagem3, #box_imagem4, #box_imagem5{
-            width: 5vw;
-            height: 88vh;
-            border-radius: 999px;
+        .box:hover {
+            flex-grow: 5;
+            transition: all 5s;
             align-items: flex-end;
-            justify-content: center;
+            background-size: 1400px;
+            height: 95vh;
+            justify-content: flex-start;
         }
 
         #box_imagem1 {
-            background-image: url("../Imagens/Floresta_Verde.jpg");  
-            background-size: 1000px;
+            background-image: url("../Imagens/Floresta_Verde.jpg");
+            background-size: 1200px;
         }
 
         #box_imagem2 {
             background-image: url("../Imagens/Outono.jpg");
-            border-radius: 80px;
-            height: 95vh;
-            width: 70vw;
-            align-items: flex-end;
-            background-size: 1250px;
-
+            background-size: 1300px;
         }
 
         #box_imagem3 {
             background-image: url("../Imagens/Flores_Cerejeira.jpg");
-            background-size: 1150px;
+            background-size: 1250px;
         }
 
         #box_imagem4 {
             background-image: url("../Imagens/Floresta_Neve.jpg");
-            background-size: 1000px;
+            background-size: 1200px;
         }
 
         #box_imagem5 {
             background-image: url("../Imagens/Aurora_Boreal.jpg");
-            background-size: 1000px;
+            background-size: 1100px;
         }
 
         .circulo {
@@ -75,7 +76,7 @@
             height: 60px;
             border-radius: 100%;
             align-content: flex-end;
-
+            left: 35%;
         }
 
         span {
@@ -87,27 +88,35 @@
         }
 
         .circulo_escrita {
-            position: relative;   
-            width: 340px;
+            position: relative;
             height: 120px;
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
             bottom: 10px;
-
         }
 
-        #circulo1, #circulo3, #circulo4, #circulo5 {
-            position: relative;
-            bottom: 15px;
-        }
 
-        .div_escrita{
+        .div_escrita {
             color: white;
             position: relative;
             left: 20px;
             font-size: 20px;
+            opacity: 0;
+        }
+
+
+        .box:hover .circulo{
+            left: 0%;
+        }
+        .box:hover .circulo_escrita{
+            width: 340px;
+            height: 120px;
+        }
+
+        .box:hover .div_escrita {
+            opacity: 1;
         }
     </style>
 
@@ -118,10 +127,17 @@
     <div class="container">
 
         <div class="box" id="box_imagem1">
-
-            <div class="circulo" id="circulo1">
-                <span>🕺</span>
+            <div class="circulo_escrita">
+                <div class="circulo" id="circulo1">
+                    <span>☀</span>
+                </div>
+                <div class="div_escrita">
+                    <span class="escrita"><strong>Verão</strong></span>
+                    <br>
+                    <span class="escrita">Floresta Verde</span>
+                </div>
             </div>
+
 
         </div>
 
@@ -130,12 +146,12 @@
             <div class="circulo_escrita">
 
                 <div class="circulo">
-                    <span>❆</span>
+                    <span>💧</span>
                 </div>
                 <div class="div_escrita">
-                    <span class="escrita"><strong>Oretemauw</strong></span>
+                    <span class="escrita"><strong>Outono</strong></span>
                     <br>
-                    <span class="escrita">Omuke trughte a otufta</span>
+                    <span class="escrita">As folhas caem</span>
                 </div>
 
             </div>
@@ -143,26 +159,47 @@
         </div>
 
         <div class="box" id="box_imagem3">
-
-            <div class="circulo" id="circulo3">
-                <span>🕭</span>
+            <div class="circulo_escrita">
+                <div class="circulo" id="circulo3">
+                    <span>🕭</span>
+                </div>
+                <div class="div_escrita">
+                    <span class="escrita"><strong>Primavera</strong></span>
+                    <br>
+                    <span class="escrita">Flores de Cerejeira</span>
+                </div>
             </div>
+
 
         </div>
 
         <div class="box" id="box_imagem4">
+            <div class="circulo_escrita">
+                <div class="circulo" id="circulo4">
+                    <span>❆</span>
+                </div>
+                <div class="div_escrita">
+                    <span class="escrita"><strong>Inverno</strong></span>
+                    <br>
+                    <span class="escrita">A bela neve</span>
+                </div>
 
-            <div class="circulo" id="circulo4">
-                <span>💧</span>
             </div>
 
         </div>
 
         <div class="box" id="box_imagem5">
-
-            <div class="circulo" id="circulo5">
-                <span>☀</span>
+            <div class="circulo_escrita">
+                <div class="circulo" id="circulo5">
+                    <span>🕺</span>
+                </div>
+                <div class="div_escrita">
+                    <span class="escrita"><strong>Aurora Boreal</strong></span>
+                    <br>
+                    <span class="escrita">Linda para se visitar</span>
+                </div>
             </div>
+
 
         </div>
 

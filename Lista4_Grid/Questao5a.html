@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 5a - Grid</title>
+
+    <style>
+
+        *{margin: 0px;}
+
+        .container{
+            display: grid;
+            height: 100vh;
+
+            grid-template-rows: 5fr 1fr 5fr 5fr;
+            grid-template-columns: 3fr 2fr 2fr 1fr;
+
+            grid-template-areas: "laranja1 rosa azul1 azul1"
+                                 "laranja1 rosa verde branco"
+                                 "azul2 rosa verde branco"
+                                 "laranja2 laranja2 verde branco";
+
+            gap: 10px;
+        }
+
+        .box{
+            display: grid;
+        }
+
+        .box a{
+            inset: 0;
+        }
+
+        #box1{
+            background-color: rgb(255, 169, 64);
+            grid-area: laranja1;
+        }
+
+        #box2{
+            background-color: rgb(245, 184, 165);
+            grid-area: rosa;
+        }
+
+        #box3{
+            background-color: rgb(202, 224, 222);
+            grid-area: azul1;
+        }
+
+        #box4{
+            background-color: rgb(202, 224, 222) ;
+            grid-area: azul2;
+        }
+
+        #box5{
+            background-color: rgb(187, 202, 109);
+            grid-area: verde;
+        }
+
+        #box6{
+            background-color: rgb(255, 169, 64);
+            grid-area: laranja2;
+        }
+
+        #box7{
+            grid-area: branco;
+            padding: 10px;
+            justify-content: center;
+            align-items: baseline;
+
+            grid-template-areas: "vermelho"
+                                 "rosa2"
+                                 "verde2"
+                                 "lilas";
+        }
+
+        .circulo{
+            display: grid;
+            border-radius: 100%;
+            width: 7vw;
+            height: 14vh;
+        }
+
+        .circulo a{
+            inset: 0;
+        }
+
+        #circulo1{
+            background-color: rgb(241, 149, 102);
+            grid-area: vermelho;
+        }
+
+        #circulo2{
+            background-color: rgb(212, 174, 174);
+            grid-area: rosa2;
+        }
+
+        #circulo3{
+            background-color: rgb(197, 203, 161);
+            grid-area: verde2;
+        }
+
+        #circulo4{
+            background-color: rgb(212, 197, 227);
+            grid-area: lilas;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="box" id="box1">
+            <a href="../ppi1_lista1/1.html.html"></a>
+        </div>
+        <div class="box" id="box2">
+            <a href="https://www.w3schools.com/html/html_intro.asp"></a>
+        </div>
+        <div class="box" id="box3">
+            <a href="https://www.w3schools.com/css/default.asp"></a>
+        </div>
+        <div class="box" id="box4">
+            <a href="https://www.w3schools.com/css/css3_animations.asp"></a>
+        </div>
+        <div class="box" id="box5">
+            <a href="https://www.w3schools.com/css/css_position.asp"></a>
+        </div>
+        <div class="box" id="box6">
+            <a href="https://www.w3schools.com/CSS/css3_flexbox.asp"></a>
+        </div>
+        <div class="box" id="box7">
+            <div class="circulo" id="circulo1">
+                <a href="https://www.w3schools.com/css/css_grid.asp"></a>
+            </div>
+            <div class="circulo" id="circulo2">
+                <a href="Questao2.html"></a>
+            </div>
+            <div class="circulo" id="circulo3">
+                <a href="Questao3.html"></a>
+            </div>
+            <div class="circulo" id="circulo4">
+                <a href="Questao4.html"></a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
