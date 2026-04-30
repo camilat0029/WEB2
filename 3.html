@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3 - Bandeiras</title>
+
+
+    <style>
+
+
+        *{background-color: rgb(238, 236, 236);}
+
+
+        .bandeiras {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+
+        .bandeiraFranca {
+            display: grid;
+            width: 1200px;
+            height: 600px;
+
+
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+
+
+            grid-template-areas: "azul branco vermelho";
+        }
+
+
+        .bandeiraAlemanha {
+            display: flex;
+            width: 1200px;
+            height: 700px;
+
+
+            flex-direction: column
+        }
+
+
+        .bandeiraJapao {
+            display: flex;
+            width: 1200px;
+            height: 700px;
+
+
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+
+
+
+
+
+        #faixaF1 {
+            background-color: rgb(0, 85, 164);
+            grid-area: azul;
+        }
+
+
+        #faixaF2 {
+            background-color: rgb(255, 255, 255);
+            grid-area: branco;
+        }
+
+
+        #faixaF3 {
+            background-color: rgb(239, 65, 53);
+            grid-area: vermelho;
+        }
+
+
+
+
+
+
+        .faixasA {
+            flex-grow: 1;
+        }
+
+
+
+
+        #faixaA1 {
+            background-color: rgb(0, 0, 0);
+        }
+
+
+        #faixaA2 {
+            background-color: rgb(221, 0, 0);
+        }
+
+
+        #faixaA3 {
+            background-color: rgb(255, 206, 0);
+        }
+
+
+
+
+
+
+
+
+        .fundoBranco {
+            background-color: white;
+            width: 1200px;
+            height: 700px;
+        }
+
+
+        .circuloVermelho {
+            position: absolute;
+            background-color: rgb(188, 0, 45);
+            width: 450px;
+            height: 450px;
+            border-radius: 100%;
+        }
+
+
+    </style>
+
+
+</head>
+
+
+<body>
+
+
+    <div class="bandeiras">
+
+
+        <h2>Bandeira da França</h2>
+        <div class="bandeiraFranca">
+            <div class="faixasF" id="faixaF1"></div>
+            <div class="faixasF" id="faixaF2"></div>
+            <div class="faixasF" id="faixaF3"></div>
+        </div>
+
+
+
+
+        <br>
+        <h2>Bandeira da Alemanha</h2>
+        <div class="bandeiraAlemanha">
+            <div class="faixasA" id="faixaA1"></div>
+            <div class="faixasA" id="faixaA2"></div>
+            <div class="faixasA" id="faixaA3"></div>
+        </div>
+
+
+
+
+        <br>
+        <h2>Bandeira do Japão</h2>
+        <div class="bandeiraJapao">
+            <div class="fundoBranco"></div>
+            <div class="circuloVermelho"></div>
+        </div>
+
+
+        <br>
+        <br>
+        <br>
+    </div>
+
+
+</body>
+
+
+</html>
+
