@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3 - CSS</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .definicoes {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 90vw;
+        }
+
+        .Exemplos {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-start;
+            width: 90vw;
+        }
+
+        p,
+        pre {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.1em;
+        }
+
+        #exemplo1 {
+            color: rgb(120, 1, 231);
+        }
+
+        .exemplo2 {
+            background-color: rgb(57, 255, 57);
+            font-size: 1.1em;
+        }
+
+        .exemplo2:hover {
+            background-color: rgb(255, 126, 148);
+            font-size: 1.3em;
+        }
+
+        .exemplo3::before {
+            content: "🌞";
+        }
+
+        .exemplo4::after {
+            content: "🌞";
+        }
+
+        .borboleta {
+            position: fixed;
+            display: block;
+            font-size: 100px;
+            animation: voar 8s linear 1s infinite;
+        }
+
+        @keyframes voar {
+
+            0% {
+                transform: rotate(90deg);
+                left: 0%;
+            }
+
+            100% {
+                transform: rotate(90deg);
+                left: 100%;
+
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="definicoes">
+
+            <h1>Regra CSS</h1>
+
+            <p>A <strong>regra CSS</strong> é criada para estilizar as páginas Web, sendo que ela é aplicada em elementos <ins>HTML(tags, identificadores, classes)</ins>. Um exemplo seria criar uma regra CSS para aplicar na tag do parágrafo uma fonte de maior ou mudar a cor do seu texto.
+            </p>
+
+            <br>
+
+            <p>Neste caso, a tag de paragrafo selecionada no CSS seria o seletor. Então, os <strong>seletores</strong> identificam qual componente do HTML receberá a regra, eles podem ser: o <strong>*</strong> (aplicará a regra em tudo), um <strong>#</strong> (identificador único), <strong>.class</strong> (uma classe, que pode se referir a varios componentes ao mesmo tempo, desde que tenham a classe igual), entre outros seletores. Porém, também pode-se combinar esses seletores para criar uma regra, assim a que tiver mais prioridade será a regra aplicada, por exemplo se criar uma regra com para a tag de um elemento e também criar uma regra para a classe deste mesmo elemento, a regra da classe irá prevalecer.</p>
+
+            <br>
+
+            <p>Na regra CSS também tem-se as <strong>propriedades</strong> e seus <strong>valores</strong>. Em que a propriedade será oque será aplicado no seletor e o valor que dirá como ou quanto será essa propriedade. Exemplo: a propridade de width (para determinar a largura do componente) com valor de 120px, a propridade de background-color (cor do fundo) com valor de Blue e assim por diante.</p>
+
+        </div>
+
+        <br>
+        <h2>Exemplos:</h2>
+        <br>
+
+        <div class="Exemplos">
+
+<pre>
+    #exemplo1 {
+
+        color: rgb(120, 1, 231);
+
+    }
+
+    <span id="exemplo1">Exemplo de regra para mudar cor do texto.</span>
+</pre>
+
+
+<pre>
+    <span>Exemplo de pseudo classe:</span>
+
+    .exemplo2:hover {
+        background-color: rgb(255, 126, 148);
+        font-size: 1.3em;
+    }
+    <button class="exemplo2">Mudar Cor e Tamanho da Fonte</button>
+</pre>
+
+
+<pre>
+    <span>Exemplo de pseudo elemento:</span>
+
+    <span class="exemplo3">Elemento antes do conteúdo</span>
+    <span class="exemplo4">Elemento depois do conteúdo</span>
+</pre>
+
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <span class="borboleta">🦋</span>
+
+</body>
+
+</html>
