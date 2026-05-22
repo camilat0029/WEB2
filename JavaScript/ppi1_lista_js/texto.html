@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #texto{
+            height: 400px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 style="border: 1px solid black;">Texto</h1>
+
+    <div tabindex="0" id="texto" style="border: 1px solid black; height: 50vh;">
+        Hoje é sexta
+    </div>
+
+    <div id="status" style="border: 1px solid black; height: 1rem;"></div>
+
+    <canvas id="canvas" height="1080px" width="1920px"></canvas>
+
+    <script>
+
+        var tecla;
+        var mouse;
+        var desenhando=false;
+        let text = document.querySelector("#texto");
+        let status = document.querySelector("#status");
+        let canvas = document.querySelector("#canvas");
+        
+        text.addEventListener('keypress', (a)=>{
+            tecla=a;
+            text.innerHTML+= a.key;
+        });
+        text.addEventListener('keydown', (e)=>{
+            if(e.key==="Backspace"){
+                //remover o ultimo caractere adicionado
+                text.innerHTML=text.innerHTML.slice(0,-1);
+            }
+        });
+
+        document.addEventListener('keydown', function(event){
+            status.innerHTML='Evento keypress: ' + event.key;
+        });
+
+        document.addEventListener('mousemove', function(e){
+            status.innerHTML='Posição do mouse: ' + e.clientX + ',' + e.clientY;
+        });
+
+        //desenhando com o mouse em um canvas
+   
+        let ctx=canvas.getContext("2d");
+        canvas.addEventListener('mousedown', (e)=>{
+            desenhando=!desenhando;
+            ctx.moveTo(e.offsetX, e.offsetY);
+        })
+
+        canvas.addEventListener('mouseup', (e)=>{
+            desenhando=!desenhando;
+        })
+
+        canvas.addEventListener('mousemove', (e)=>{
+            mouse=e;
+            if(desenhando){
+                
+                console.log("mouse " + e.offsetX +","+ e.offsetY);
+                ctx.lineTo(e.offsetX,e.offsetY);
+                ctx.stroke();
+            } 
+        })
+
+    </script>
+
+</body>
+</html>
