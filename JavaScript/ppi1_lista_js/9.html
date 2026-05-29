@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 9 - Paleta de Cor</title>
+
+    <style>
+        .divbox{
+            display: flex;
+            height: 95vh;
+            flex-grow: 1;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box{
+            height:300px;
+            width: 350px;
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="divbox">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+        <div class="box" id="box5"></div>
+    </div>
+
+    <script>
+        function randColor(){
+            let color=Math.random()*255;
+            return color.toFixed(0);
+        }
+
+        document.addEventListener('keypress', ()=>{
+            let caixas = document.querySelectorAll(".box");
+            for(let i=0; i<=caixas.length; i++){
+                caixas[i].style.backgroundColor = "rgb("+randColor()+","+randColor()+","+randColor()+")";
+            }
+        })
+
+    </script>
+
+</body>
+</html>

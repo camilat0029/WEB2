@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 8 - Mudando cor do Fundo</title>
+
+    <style>
+
+        body{
+            height: 100vh;
+            display: flex;
+            background-color: rgb(165, 209, 209);
+            justify-content: center;
+            align-items: center;
+        }
+
+        #botao{
+            width: 400px;
+            height: 50px;
+            font-size: 2em;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <button id="botao">Alterar Cor do Fundo</button>
+
+    <script>
+
+        let botao = document.getElementById("botao");
+
+        function randColor(){
+            let color = Math.random()*255;
+            return color;
+        }
+        botao.addEventListener("click", ()=>{
+
+            document.body.style.backgroundColor = "rgb("+randColor()+","+randColor()+","+randColor()+")";
+
+        })
+
+    </script>
+</body>
+</html>
