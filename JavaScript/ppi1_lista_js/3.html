@@ -3,118 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questão 3</title>
+    <title>Questão 3 - Prompt e Alert</title>
 </head>
 <body>
 
-    <h1>JS</h1>
-
-    <div>
-        <p>Tipos Primitivos do JS</p>
-
-        <ul>
-            <li>String</li>
-            <li>Number</li>
-            <li>Undefined</li>
-            <li>Boolean</li>
-            <li>null</li>
-        </ul>
-
-        <p>Como declarar variável</p>
-        <p>Usamos let ou var para declarar variável</p>
-        <code class="language-javascript">
-            var nome; //cria uma variável global com identificador;
-            <br>
-            let idade; //cria uma variável local com um identificador idade
-        </code>
-
-        <p>Funcões em JavaScript</p>
-        <code class="language-javascript">
-            funcion nomeDaFuncao() {
-                //Código da função
-            }
-
-            ()=>{
-                //código da função anônima
-            }
-
-            <div>
-                <p>Tratamento de evento em JavaScript</p>
-                <p>Tratamos evento em JS usando <code>addEventListener</code> que vincula uma função a um evento específico do DOM.</p>
-                <p>Exemplo:</p>
-                <code class="language-javascript">
-                    document.addEventListener('click', function(){
-                        console.log("Clique detectado")
-                    })
-                </code>
-
-                <p>Eventos Comuns disponíveis nos Navegadores</p>
-                <ul>
-                    <li>click - evento de click</li>
-                    <li>mouseover - evento de mouse sobre o elemento</li>
-                    <li>mouseout - evento de mouse fora o elemento</li>
-                    <li>mouseenter - evento de mouse entrando no elemento</li>
-                    <li>keypress - evento da tecla pressionada caracteres visiveis ASCII</li>
-                    <li>keydown - evento da tecla pressionada</li>
-                    <li>ketup - evento de tecla solta</li>
-                    <li>submit - evento de encio de formulário da tag form</li>
-                    <li>DOMContentLoaded - evento disparado quando o documento HTML é completamente carregado e parseado</li>
-                    <li>change - evento disparado quando o valor de um elemento de formulário é alterado</li>
-
-                </ul>
-            </div>
-
-        </code>
-
-
-    </div>
-
     <script>
 
-        document.addEventListener('keypress', function(event){
-            console.log('Evento keypress: ' + event.key);
-        })
-
-        document.addEventListener('keydown', function(event){
-            console.log('Evento keydown: ' + event.key);
-        })
-
-        if(true){
-            var nome = "João";
-            let idade = 30;
-        }
-        //console.log(nome); //Imprime "João"
-        //console.log(idade); // Erro: idade is not defined
-
-        function soma(a,b){
-            return a+b;
-        }
-
-        //definindo uma função que só recebe inteiros
-        function somaInteiros(a,b){
-            if(Number.isInteger(a) && Number.isInteger(b)){
-                return a+b;
-            }
-            throw new Error("Os argumentos devem ser inteiros");
-        }
-
-        //Funcões anônimas
-        ()=>{}
-
-        //Declarando uma função para escrever uma mensagem
-        function tratamentoMouseOver(){
-            console.log("mouse sobre o corpo do documento")
-        }
-
-        //vinculamos a função ao evento mouseOver do corpo do documento
-        document.body.addEventListener('mouseover', tratamentoMouseOver);
-        document.body.addEventListener('mousenter', ()=>{
-            console.log("mouse entrou do corpo do documento")
-        })
-        document.body.addEventListener('mouseout', ()=>{
-            console.log("mouse saiu do corpo do documento")
-        })
-
+        const nome = prompt("Informe o seu nome:");
+        alert(nome);
 
     </script>
     
