@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 5 - Números aleatórios com intervalo</title>
+</head>
+
+<body>
+
+    <h1>Sorteio de Números</h1>
+
+    <label for="">Informe um valor mínimo:</label>
+    <input type="number" name="" id="minimo">
+
+    <label for="">Informe um valor máximo:</label>
+    <input type="number" name="" id="maximo">
+
+    <button id="sortear">Sortear</button>
+
+    <div id="resultado"></div>
+
+    <script>
+
+        minimo, maximo, resultado;
+
+        let botao = document.getElementById("sortear");
+        let rarray = [];
+
+        botao.addEventListener("click", () => {
+
+            if (minimo.value.trim() !== "" && maximo.value.trim() !== "") {
+                let vmin = Number(minimo.value);
+                let vmax = Number(maximo.value);
+                let r = Math.floor(Math.random() * (vmax - vmin + 1) + vmin);
+
+              
+                let repetido = rarray.find(item => item.numero === r);
+
+                if (repetido) {
+                    repetido.vezes++;
+                } else {
+                    rarray.push({ numero: r, vezes: 1 });
+                }
+                
+                resultado.innerHTML = "";
+
+                for (let item of rarray) {
+                    let p = document.createElement("p");
+                    p.style.display = "block";
+                    p.style.padding = "10px";
+                    p.style.gap = "1px";
+                    p.innerHTML = item.numero + " - sorteado " + item.vezes + " vez(es)";
+                    resultado.appendChild(p);
+                }
+
+
+
+
+
+
+
+            }
+
+
+        })
+
+    </script>
+
+</body>
+
+</html>

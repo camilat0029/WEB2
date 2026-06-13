@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2 - Tipos de variáveis e operadores</title>
+</head>
+
+<body>
+
+    <h2>Tipos de variáveis e operadores</h2>
+
+    <button id="botao">Variáveis e Operações</button>
+
+    <h3 id="variaveis"></h3>
+
+    <p id="pstring"></p>
+    <p id="pnumber"></p>
+    <p id="pboolean"></p>
+    <p id="pundefined"></p>
+    <p id="pnull"></p>
+    <p id="pobject"></p>
+    <p id="parray"></p>
+
+    <h3 id="operacoes"></h3>
+
+    <p id="exemplo1"></p>
+    <p id="exemplo2"></p>
+    <p id="exemplo3"></p>
+
+    <script>
+        let pstr = "Camila";
+        let pnum = 18;
+        let pbool = true;
+        let pundef;
+        let pnulll = null;
+        let pobj = {};
+        let parra = [1, 2, 3];
+
+        let exe1 = pstr + pnum;
+        let exe2 = pbool + pnum;
+        let exe3 = parra + pnum + pnulll + pobj;
+
+        let botao = document.getElementById("botao");
+
+        botao.addEventListener("click", () => {
+
+            console.log(typeof (pstr));
+            console.log(typeof (pnum));
+            console.log(typeof (pbool));
+            console.log(typeof (pundef));
+            console.log(typeof (pnulll));
+            console.log(typeof (pobj));
+            console.log(typeof (parra));
+
+            document.getElementById("variaveis").innerText = "Variáveis e seus tipos de dados";
+
+            pstring.innerHTML = pstr + " - Tipo de dado: " + typeof (pstr);
+            pnumber.innerHTML = pnum + " - Tipo de dado: " + typeof (pnum);
+            pboolean.innerHTML = pbool + " - Tipo de dado: " + typeof (pbool);
+            pundefined.innerHTML = pundef + " - Tipo de dado: " + typeof (pundef);
+            pnull.innerHTML = pnulll + " - Tipo de dado: " + typeof (pnulll) + " - " + arrayNull(pnulll);
+            pobject.innerHTML = pobj + " - Tipo de dado: " + typeof (pobj);
+            parray.innerHTML = "[" + parra + "] - Tipo de dado: " + typeof (parra) + " - " + arrayNull(parra);
+
+            function arrayNull(valor) {
+                if (valor === null) {
+                    return "null";
+                } else if (Array.isArray(valor)) {
+                    return "array";
+                }
+            }
+
+            document.getElementById("operacoes").innerText = "Exemplos de operações com as variáveis";
+
+            console.log(exe1);
+            document.getElementById("exemplo1").innerText = ` ${pstr} + ${pnum} =  ${exe1}`;
+
+            console.log(exe2);
+            document.getElementById("exemplo2").innerText = ` ${pbool} + ${pnum} =  ${exe2}`;
+
+            console.log(exe3);
+            document.getElementById("exemplo3").innerText = ` ${parra} + ${pnum} +  ${pnulll} + ${pobj} =  ${exe3}`;
+
+        })
+
+    </script>
+
+</body>
+
+</html>
