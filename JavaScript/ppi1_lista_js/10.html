@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 10 - Calculadora</title>
+
+    <style>
+
+        body{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .calculadora{
+            display: grid;
+            font-size: 1.3em;
+
+            width: 350px;
+            height: 350px;
+
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+            grid-template-areas: "operacoes operacoes operacoes operacoes"
+                                 "adicao subtra multip divis"
+                                 "sete oito nove igual"
+                                 "quatro cinco seis igual"
+                                 "um dois tres igual"
+                                 "zeroo ponto limpa igual";
+
+        }
+
+        .comp{
+            display: grid;
+            justify-content: center;
+            align-content: center;
+
+            border: 1px solid rgb(183, 183, 183);
+        }
+
+        #comp1{
+            grid-area: operacoes;
+            background-color: rgb(46, 46, 46);
+            color: white;
+
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        #comp2{
+            grid-area: adicao;
+            background-color: gainsboro;
+        }
+
+        #comp3{
+            grid-area: subtra;
+            background-color: gainsboro;
+        }
+
+        #comp4{
+            grid-area: multip;
+            background-color: gainsboro;
+        }
+
+        #comp5{
+            grid-area: divis;
+            background-color: gainsboro;
+        }
+
+        #comp6{
+            grid-area: igual;
+            background-color: rgb(247, 132, 132);
+            border-bottom-right-radius: 10px;
+        }
+
+        #comp7{grid-area: nove;}
+
+        #comp8{grid-area: oito;}
+
+        #comp9{grid-area: sete;}
+
+        #comp10{grid-area: seis;}
+
+        #comp11{grid-area: cinco;}
+
+        #comp12{grid-area: quatro;}
+
+        #comp13{grid-area: tres;}
+
+        #comp14{grid-area: dois;}
+
+        #comp15{grid-area: um;}
+
+        #comp16{
+            grid-area: zeroo;
+            border-bottom-left-radius: 10px
+        }
+
+        #comp17{grid-area: ponto;}
+
+        #comp18{grid-area: limpa;}
+
+        .comp#comp1{justify-content: right;}
+
+    </style>
+
+</head>
+<body>
+
+    <div class="calculadora">
+        <div class="comp" id="comp1"></div>
+        <div class="comp" id="comp2">+</div>
+        <div class="comp" id="comp3">-</div>
+        <div class="comp" id="comp4">×</div>
+        <div class="comp" id="comp5">÷</div>
+        <div class="comp" id="comp6">=</div>
+        <div class="comp" id="comp7">9</div>
+        <div class="comp" id="comp8">8</div>
+        <div class="comp" id="comp9">7</div>
+        <div class="comp" id="comp10">6</div>
+        <div class="comp" id="comp11">5</div>
+        <div class="comp" id="comp12">4</div>
+        <div class="comp" id="comp13">3</div>
+        <div class="comp" id="comp14">2</div>
+        <div class="comp" id="comp15">1</div>
+        <div class="comp" id="comp16">0</div>
+        <div class="comp" id="comp17">.</div>
+        <div class="comp" id="comp18">AC</div>
+    </div>
+
+    <script>
+
+        let op = document.querySelector("#comp1");
+        let botoes = document.querySelectorAll(".comp");
+
+        let calculou = false;
+
+        botoes.forEach(botao => {
+
+            botao.addEventListener("click", ()=> {
+
+                if (botao.id === "comp1") {
+                    return;
+                }
+
+                if (botao.id === "comp18") {
+                    op.textContent = "";
+                    return;
+                }
+
+                if (calculou === true) {
+                    op.textContent = "";
+                    calculou = false;
+                }
+
+                if (botao.id === "comp6") {
+
+                    if (op.textContent === ""){
+                        return;
+                    }
+                    let expressao = op.textContent.replaceAll("×","*").replaceAll("÷","/");
+                    op.textContent = eval(expressao);
+                    calculou = true;
+                } else {
+                    op.textContent += botao.textContent;
+                }
+            
+            })
+        })
+
+    </script>
+    
+</body>
+</html>
