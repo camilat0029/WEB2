@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 13 - Desenho com Canvas</title>
+
+    <style>
+        body{
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Desenho com Canvas</h1>
+
+    <canvas id="meuCanvas" width="400" height="300" style="border:1px solid #000;"></canvas>
+
+    <script>
+
+        var desenhando = false;
+        let ctx = meuCanvas.getContext("2d");
+
+        ctx.fillStyle = "blue";
+        ctx.fillRect(50, 50, 100, 50);
+
+        ctx.fillStyle = "red";
+        ctx.beginPath();
+        ctx.arc(250, 150, 30, 0, 2 * Math.PI);
+        ctx.fill();
+
+        ctx.fillStyle = "black";
+        ctx.font = "20px TimesNewRoman";
+        ctx.fillText("Canvas!", 120, 250);
+
+        meuCanvas.addEventListener("mousedown", (e)=> {
+            desenhando = !desenhando;
+            ctx.moveTo(e.offsetX, e.offsetY);
+        })
+
+        meuCanvas.addEventListener("mouseup", ()=> {
+            desenhando = !desenhando;
+        })
+
+        meuCanvas.addEventListener("mousemove", (e)=> {
+
+            if (desenhando) {
+                ctx.lineTo(e.offsetX, e.offsetY);
+                ctx.stroke();
+            }
+        })
+
+    </script>
+
+</body>
+</html>

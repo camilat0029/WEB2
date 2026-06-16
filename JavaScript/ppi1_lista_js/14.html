@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Questão 14 - Captura de Teclas do Teclado</title>
+</head>
+<body>
+
+    <h1>Captura de Teclas do Teclado</h1>
+
+    <div id="saida"></div>
+
+    <script>
+
+        document.addEventListener("keydown", function(event) {
+
+            console.log(event.key, event.code);
+
+            if(event.key === "Backspace"){
+                saida.innerHTML = saida.innerHTML.slice(0, -1);
+            } else {
+                saida.innerHTML += `${event.key} ${event.code} `;
+            }
+
+        })
+
+    </script>
+    
+</body>
+</html>
