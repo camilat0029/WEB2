@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 12 - Local Storage</title>
+
+    <style>
+
+        body{
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            gap: 30px;
+
+        }
+
+        #nameInput, #saveButton, p{
+            font-size: 1.3em;
+        }
+
+        #nameInput{
+            width: 250px;
+            height: 35px;
+        }
+
+        #saveButton{
+            width: 260px;
+            height: 40px;
+            background-color: rgb(223, 188, 255);
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Salvando dados no Local Storage</h2>
+
+    <input type="text" id="nameInput" placeholder="Digite seu nome">
+    <button id="saveButton">Salvar</button>
+    <p id="greeting"></p>
+
+    <script>
+
+        let botao = document.getElementById("saveButton");
+
+        const nomeSalvo = localStorage.getItem("nome");
+
+        if(nomeSalvo){
+             greeting.textContent =  `Olá!!! ${nomeSalvo}`
+        }
+
+        botao.addEventListener("click", ()=> {
+
+            const nome = nameInput.value
+
+            localStorage.setItem("nome", nome);
+            greeting.textContent =  `Olá!!! ${nome}`
+        })
+
+    </script>
+
+</body>
+</html>
