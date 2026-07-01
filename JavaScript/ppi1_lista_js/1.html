@@ -3,11 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questão 1</title>
+    <title>O que é JavaScript?</title>
 </head>
 <body>
 
     <!-- No navegador roda no sandbox, no servidor não. -->
+     <h1 id="tituloH1">O que é JavaScript?</h1>
+
+     <p id="paragrafoExplicacao">A motivação para criar o JavaScript foi de que antes só tinha um HTML estático exibindo elementos na tela, mas não era possível validar ou atualizar informações, <br>ou seja, não conseguia-se interagir com as ações do usuário como os eventos de clique. Assim, o JavaScript surge para solucionar estas questões e possibilitar <br>diversas interações que antes não era possível. Além disso, o a diferença de rodar o JavaScript no navegador e no servidor é de que no navegador estará <br>rodando-o no sandbox, e no servidor não ocorre isso. E o sandbox no navegador isola os sites criados de acessar diretamente os sistemas operacionais e <br>arquivos do computador para uma maior segurança. E ainda o document é o que representa o HTML, então ao utilizar o JavaScript e quiser por exemplo <br>chamar algum elemento do HTML precisa primeiro chamar document na frente; já o console é para depurar/testar códigos e o alert exibe uma mensagem de <br>alerta ao usuário.</p>
+
+    <p id="hora"></p>
+
+    <script>
+
+        console.log("JavaScript");
+        alert("Olá! Bem vindo!");
+
+        const hora = new Date();
+        document.getElementById("hora").innerHTML = "Hora: " + hora.toLocaleTimeString();
+
+    </script>
     
 </body>
 </html>
